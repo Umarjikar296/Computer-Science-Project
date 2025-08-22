@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Recommendations</title>
+</head>
+<body>
+  <h1>Recommendations for: {{ skills }}</h1>
+  <ul>
+    {% for title, score in recommendations %}
+      <li>{{ title }} — Similarity: {{ "%.2f"|format(score) }}</li>
+    {% endfor %}
+  </ul>
+  <a href="/">Back</a>
+</body>
+</html>
